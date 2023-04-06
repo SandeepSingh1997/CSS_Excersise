@@ -93,7 +93,6 @@ img {
   bottom: 50px;
   width: 100%;
   display: flex;
-  justify-content: center;
 }
 
 .down-btn {
@@ -111,16 +110,20 @@ img {
 
 @keyframes pulsate {
   0% {
-    opacity: 1;
+    opacity: 0;
+    width: 80px;
+    height: 80px;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
+    width: 110px;
+    height: 110px;
+    transform: translateX(-15%);
   }
 }
 
 .down-btn-backdrop {
-  position: relative;
-  transform: translateX(-95px);
+  position: absolute;
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.498);
   height: 110px;
@@ -132,7 +135,7 @@ img {
   animation-name: pulsate;
   animation-duration: 1.25s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
   animation-direction: alternate;
 }
 
