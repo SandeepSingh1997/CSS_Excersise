@@ -22,10 +22,12 @@ a {
   font-size: larger;
   margin: 20px;
   text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.367);
 }
 
 a:hover {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.702);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.702);
 }
 
 h1 {
@@ -104,6 +106,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 /*animating the backdrop*/
@@ -114,8 +117,11 @@ img {
     width: 80px;
     height: 80px;
   }
-  100% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
     width: 110px;
     height: 110px;
     transform: translateX(-15%);
@@ -133,10 +139,10 @@ img {
   border: 0px;
 
   animation-name: pulsate;
-  animation-duration: 1.25s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  animation-direction: alternate;
+  animation-direction: forward;
 }
 
 .down-btn > img {
