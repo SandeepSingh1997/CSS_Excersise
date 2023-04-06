@@ -24,6 +24,10 @@ a {
   text-transform: uppercase;
 }
 
+a:hover {
+  border-bottom: 1px solid white;
+}
+
 h1 {
   color: white;
   font-size: 120px;
@@ -79,31 +83,67 @@ img {
   width: 30px;
 }
 
+.empty-div {
+  width: 100%;
+}
+
 .down-btn-container {
   position: absolute;
   bottom: 50px;
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .down-btn {
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
   flex-shrink: 0;
-  border-radius: 45px;
+  border-radius: 40px;
   border: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.empty-div {
-  width: 100%;
+/*animating the backdrop*/
+
+@keyframes pulsate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.down-btn-backdrop {
+  position: relative;
+  transform: translateX(-95px);
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.498);
+  height: 110px;
+  width: 110px;
+  flex-shrink: 0;
+  border-radius: 55px;
+  border: 0px;
+
+  animation-name: pulsate;
+  animation-duration: 1.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
 }
 
 .down-btn > img {
   position: relative;
   z-index: 1;
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
+}
+
+.down-btn-main {
+  display: flex;
+  align-items: center;
+  width: 100px;
 }
