@@ -25,7 +25,7 @@ a {
 }
 
 a:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.702);
 }
 
 h1 {
@@ -58,8 +58,9 @@ p {
 img {
   position: absolute;
   z-index: -1;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   top: 0px;
 }
 
@@ -146,4 +147,20 @@ img {
   display: flex;
   align-items: center;
   width: 100px;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  a {
+    font-size: xx-large;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  p {
+    font-size: 30px;
+  }
+  .text-main {
+    left: 20px;
+  }
 }
