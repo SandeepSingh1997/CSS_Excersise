@@ -66,8 +66,8 @@ img {
 
 .text-main {
   position: relative;
-  top: 50px;
-  left: 50px;
+  padding-top: 80px;
+  padding-left: 40px;
 }
 
 .button-streaming {
