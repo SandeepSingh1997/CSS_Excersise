@@ -29,7 +29,7 @@ input[type="text"] {
 }
 
 /* 6. Change the background color of the form to "lightblue" only when one of the children receives the focus */
-form > :focus {
+form:focus-within {
   background-color: lightblue;
 }
 
@@ -49,8 +49,12 @@ a[href^="https"] {
 }
 
 /* 10. Give a "crimson" background color to the first line of the last paragraph and increase the size of its first letter to 50px */
-p:last-child {
-  background-color: crimson;
+/* You need to make two selections */
+
+.final-txt::first-letter {
+  font-size: 50px;
 }
 
-/* You need to make two selections */
+.final-txt::first-line {
+  background-color: crimson;
+}
