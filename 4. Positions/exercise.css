@@ -30,8 +30,8 @@ So place these four buttons according to the text they contain.
 Use an offset of "15px" each time, so they don't stick to the edges.
 */
 
-.floating-btn {
-  position: absolute;
+/* .floating-btn {
+  position: fixed;
 }
 .b1 {
   transform: translate(15px, 15px);
@@ -48,7 +48,7 @@ Use an offset of "15px" each time, so they don't stick to the edges.
   top: 100%;
   left: 100%;
   transform: translate(calc(-100% - 15px), calc(-100% - 15px));
-}
+} */
 
 /* exercise 4 */
 /* Try to shift the ".home-content" div by 100px from the top while remaining in the document flow. */
@@ -56,4 +56,24 @@ Use an offset of "15px" each time, so they don't stick to the edges.
 .home-content {
   position: relative;
   top: 100px;
+}
+
+.floating-btn {
+  position: fixed;
+}
+.b1 {
+  top: 15px;
+  left: 15px;
+}
+.b2 {
+  top: 15px;
+  right: 15px;
+}
+.b3 {
+  bottom: 15px;
+  left: 15px;
+}
+.b4 {
+  right: 15px;
+  bottom: 15px;
 }
