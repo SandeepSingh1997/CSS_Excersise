@@ -1,0 +1,30 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: #333;
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+}
+
+.galerie {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+}
+
+.item {
+  width: 300px;
+  height: 200px;
+}
+.item img {
+  width: 100%;
+  height: auto;
+}
