@@ -1,0 +1,48 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+}
+
+.btn-anim {
+  padding: 20px;
+  width: 120px;
+  text-transform: uppercase;
+  outline: none;
+  position: relative;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin: 100px;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-anim::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 2px solid rgb(0, 0, 0);
+  transition: transform 0.3s;
+}
+
+.btn-anim::before {
+}
+
+.btn-anim:hover::before,
+.btn-anim:focus::before {
+  transform: scale(1.05, 1.1);
+}
+
+.btn-anim:active::before {
+  transform: scale(1.1, 1.2);
+}
