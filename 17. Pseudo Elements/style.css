@@ -35,9 +35,6 @@ body {
   transition: transform 0.3s;
 }
 
-.btn-anim::before {
-}
-
 .btn-anim:hover::before,
 .btn-anim:focus::before {
   transform: scale(1.05, 1.1);
